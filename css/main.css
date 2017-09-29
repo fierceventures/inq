@@ -44,37 +44,6 @@ html {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.bg-triangle {
-	position: fixed;
-	top: 0;
-	right: 0;
-	border-color: transparent;
-	border-style: solid;
-	border-width: 30vw;
-	border-right-color: rgba(57, 67, 67, 0.3);
-	border-top-color: rgba(57, 67, 67, 0.3);
-	transition: all 1s ease-in-out 0s;
-	z-index: -1;
-}
-
-@keyframes triangleIn {
-	0% {
-		border-width: 0;
-		opacity: 0;
-	}
-	100% {
-		border-width: 30vw;
-		opacity: 1;
-	}
-}
-
-:focus {
-	outline: none;
-}
-
-body {
-}
-
 a {
 	color: #ebff30;
 	text-decoration: none;
@@ -142,10 +111,6 @@ nav a {
 	display: inline-block;
 	vertical-align: top;
 	padding: 2.6rem 1.2rem;
-}
-
-nav a:first-child {
-	font-size: 1.2rem;
 }
 
 nav a:hover,
@@ -451,13 +416,71 @@ li.today .date {
 	transition: all .2s ease-in-out 0s;
 }
 
-@media(max-width: 768px) {
+.bg-triangle {
+	position: fixed;
+	top: 0;
+	right: 0;
+	border-color: transparent;
+	border-style: solid;
+	border-width: 30vw;
+	border-right-color: rgba(57, 67, 67, 0.3);
+	border-top-color: rgba(57, 67, 67, 0.3);
+	transition: all 1s ease-in-out 0s;
+	z-index: -1;
+}
 
-    .calendar .weekdays, .calendar .other-month {
-        display: none;
-    }
 
-    .calendar li {
+
+
+@media (max-width: 768px) {
+
+
+	br {
+		display: none;
+	}
+	
+	h2 {
+		font-size: 2.4rem;
+		line-height: 2.8rem;
+	}
+	
+	h3 {
+		font-size: 1.4rem;
+		line-height: 2rem;
+	}
+	
+	.col {
+		width: 100% !important;
+		margin: 0;
+	}
+	
+	.indent {
+		padding: 0;
+	}
+	
+	section {
+		display: inline-block;
+		padding: 6rem 2em 10rem 2rem;
+	}
+	
+	#instafeed {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	
+	.gallery-image {
+		width: 100%;
+		border-width: .5rem;
+		transition: none;
+		transform: scale(1);
+		margin-bottom: 2rem;
+	}
+	
+	.gallery-image:hover {
+		transform: scale(1);
+	}
+	
+	.calendar li {
         height: auto !important;
         border: 1px solid #ededed;
         width: 100%;
@@ -471,7 +494,7 @@ li.today .date {
     
     .menu {
 		display: none;
-		position: absolute;
+		position: fixed;
 		top: 0;
 		bottom: 0;
 		width: 100vw;
@@ -481,10 +504,7 @@ li.today .date {
 		padding-top: 3rem;
 		overflow: scroll;
 		padding-bottom: 3rem;
-	}
-	
-	.home-link {
-		display: block;
+		z-index: 99999;
 	}
 	
 	.menu a {
@@ -496,6 +516,19 @@ li.today .date {
 	
 	nav:hover .menu {
 		display: block;
+	}
+	
+	nav {
+		position: static;
+	}
+	
+	.logotype {
+		margin-left: .8rem;
+	}
+	
+	.logo {
+		width: 180px;
+		height: 180px;
 	}
 }
 
