@@ -1,3 +1,6 @@
+/* @override 
+	http://localhost:4000/css/main.css */
+
 @font-face {
   font-family: 'Circular Book';
   src: url('../fonts/circularstd-book-webfont.eot');
@@ -74,14 +77,18 @@ body {
 
 a {
 	color: #ebff30;
+	text-decoration: none;
+	font-family: "Circular Medium", sans-serif;
 }
 
 p {
 	margin-top: 0;
 	margin-bottom: 1rem;
+	color: #bcc2c2;
 }
 
 strong {
+	color: #fff;
 	font-family: "Circular Bold", sans-serif;
 }
 
@@ -91,13 +98,28 @@ h2 {
 	font-size: 3.2rem;
 	letter-spacing: -0.04rem;
 	line-height: 3.4rem;
-	margin-top: 2rem;
-	margin-bottom: 1rem;
+	margin-bottom: 1.5rem;
+	margin-top: 0;
 }
 
 h3 {
-	font-size: 1.3rem;
+	font-size: 1.5rem;
+	line-height: 2.2rem;
+	font-family: "Circular Medium", sans-serif;
+	color: #ebff30;
+	font-weight: normal;
+	display: inline-block;
+	margin-top: 0;
+	margin-bottom: 2rem;
+}
+
+h4 {
+	font-size: 1.1rem;
+	font-family: "Circular Bold", sans-serif;
+	font-weight: normal;
 	margin: 0;
+	margin-top: 2rem;
+	margin-bottom: .5rem;
 }
 
 nav {
@@ -122,24 +144,37 @@ nav a {
 	padding: 2.6rem 1.2rem;
 }
 
+nav a:first-child {
+	font-size: 1.2rem;
+}
+
 nav a:hover,
 nav a.active {
 	color: #ebff30;
 }
 
 section {	
-	max-width: 1150px;
+	max-width: 1240px;
 	min-height: 100vh;
 	margin-right: auto;
 	margin-left: auto;
-	padding: 8rem 4rem;
+	padding: 8rem 4rem 0;
 
-	animation: slideIn 1s ease-in-out 0s forwards;
+	animation: slideIn .6s ease-in-out 0s forwards;
+}
+
+section h3 {
+	animation: slideIn .7s ease-in-out 0s forwards;
+}
+
+section p,
+section h4 {
+	animation: slideIn .8s ease-in-out 0s forwards;
 }
 
 @keyframes slideIn {
 	0% {
-		transform: translatey(5rem);
+		transform: translateX(50vw);
 		opacity: 0;
 	}
 	100% {
@@ -149,29 +184,28 @@ section {
 }
 
 .events section {
-	max-width: 90vw;
+	max-width: 95vw;
+	padding-right: 4rem;
+}
+
+.cta h3 {
+	color: #fff;
+	font-size: 1.4rem;
+	line-height: 2rem;
+}
+
+.members .cta {
+	margin-top: 3rem;
 }
 
 .events section .cta {
-	float: right;
-	margin-top: 4rem;
-	margin-right: 3rem;
+	width: 100%;
+	text-align: right;
+	padding: 3rem 2rem 2rem;
 }
 
 .events section .cta h3 {
 	display: inline-block;
-}
-
-.events section .cta .button {
-	background-color: #ebff30;
-	color: #273232;
-	text-decoration: none;
-	text-align: center;
-	font-weight: 600;
-	font-size: 1.1rem;
-	padding: .7rem 1rem;
-	margin-left: 1rem;
-	letter-spacing: -0.02rem;
 }
 
 .logotype {
@@ -184,10 +218,9 @@ section {
 	position: fixed;
 	bottom: 0;
 	left: 0;
-	width: 350px;
-	height: 350px;
+	width: 300px;
+	height: 300px;
 	display: block;
-	padding: 2.8rem;
 	z-index: 2;
 	pointer-events: none;
 }
@@ -198,11 +231,22 @@ section {
 
 .row {
 	display: inline-block;
-	margin-top: 4rem;
 }
 
 .col {
 	float: left;
+	margin-top: 2rem;
+}
+
+.col:last-child h4:first-child {
+	margin-top: 0;
+}
+
+.row .col h4:first-child {
+	margin-top: 0;
+}
+
+.indent {
 	padding-left: 8rem;
 }
 
@@ -247,20 +291,20 @@ section {
     color: #fff;
     font-size: .7rem;
     letter-spacing: .1rem;
-    font-weight: 500;
 	height: 2.2rem;
 	line-height: 1.7rem;
+	font-family: "Circular Medium", sans-serif;
 }
 
 .calendar ul.days {
 	overflow-x: scroll;
-	height: 61vh;
+	height: 64.5vh;
 	border-bottom: 1px solid #394343;
 }
 
 .calendar ul.days li {
 	position: relative;
-	height: 11rem;
+	height: 10rem;
 }
 
 .calendar ul.days li:hover {
@@ -284,17 +328,16 @@ section {
 .calendar .event {
     clear: both;
     display: block;
-    font-size: .7rem;
-    line-height: 1rem;
+    font-size: .8rem;
 	margin-bottom: .4rem;
     background-color: #394343;
     color: #fff;
-    font-weight: 400;
     text-decoration: none;
     z-index: 999 !important;
     position: relative;
     cursor: default;
 	padding: .6rem .8rem .8rem;
+	line-height: 1.2rem;
 }
 
 .calendar .event p {
@@ -306,14 +349,17 @@ section {
 }
 
 .calendar .event-title {
-    margin-bottom: .4rem; 
+    margin-bottom: .4rem;
+    font-family: "Circular Medium", sans-serif;
 }
 
 .calendar .event-time {
 	color: #ebff30;
 	text-decoration: none;
-	font-weight: 600;
 	line-height: .6rem;
+	font-family: "Circular Medium", sans-serif;
+	letter-spacing: -0.02rem;
+	margin-bottom: .2rem;
 }
 
 .calendar .event .event-details {
@@ -324,9 +370,9 @@ section {
 }
 
 .calendar .event:hover .event-details {
-	max-height: 5rem;
+	max-height: 8rem;
 	opacity: 1;
-	margin-top: .6rem;
+	margin-top: .8rem;
 	-webkit-transition: all .3s ease-in-out 0s;
 }
 
@@ -337,7 +383,7 @@ section {
 	color: #273232;
 	text-decoration: none;
 	text-align: center;
-	font-weight: 600;
+	font-family: "Circular Bold", sans-serif;
 	font-size: .9rem;
 	margin-top: .8rem;
 }
@@ -378,6 +424,32 @@ li.today .date {
 	background-color: #ebff30;
 }
 
+
+#instafeed {
+	clear: both;
+	display: inline-block;
+	margin: 1rem -1rem 8rem;
+	min-height: 30rem;
+	width: 100%;
+	animation: slideIn 1s ease-in-out 0s forwards;
+}
+
+.gallery-image {
+	width: 33.3334%;
+	height: auto;
+	display: block;
+	float: left;
+	border-radius: .2rem;
+	transform: scale(.9);
+	box-shadow: 0 10px 20px #202626;
+	border: 2rem solid #fff;
+	transition: all .5s ease-in-out 0s;
+}
+
+.gallery-image:hover {
+	transform: scale(1);
+	transition: all .2s ease-in-out 0s;
+}
 
 @media(max-width: 768px) {
 

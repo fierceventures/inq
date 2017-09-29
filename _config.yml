@@ -9,12 +9,9 @@ baseurl: ""
 
 url: ""
 
-includes_dir:    _includes
-
 markdown: kramdown
 
 plugins:
-  - jekyll-feed
 
 exclude:
   - Gemfile

@@ -8,7 +8,27 @@ permalink: /gallery/
 
 <section>
 	<div class="container">
+		
 		<h2>Gallery</h2>
-		<p>Etiam porta sem malesuada magna mollis euismod. Nulla vitae elit libero, a pharetra augue. Maecenas faucibus mollis interdum.</p>
+		<h3>We are a community of passionate,<br> motivated people - just like you!</h3>
+		
+		<div id="instafeed"></div>
+		
 	</div>
 </section>
+
+<script src="/js/instafeed.min.js" type="text/javascript"></script>
+
+{% assign url = '{{image}}' %}
+
+<script type="text/javascript">
+    var feed = new Instafeed({
+        get: 'user',
+        userId: '6107109912',
+        clientId: 'b37a3fc590964986b69e8982f3fddc63',
+        accessToken: '6107109912.1677ed0.9d2d365bd0494a339fe68d2d9e2064d1',
+        resolution: 'standard_resolution',
+        template: '<img src="{{url}}" class="gallery-image"/>'
+    });
+    feed.run();
+</script>
