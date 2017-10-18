@@ -219,7 +219,6 @@ section h4 {
 	width: 50%;
 }
 
-
 .calendar {
 	width: 100%;
 	height: 100%;
@@ -349,6 +348,8 @@ section h4 {
 	text-decoration: none;
 	text-align: center;
 	font-family: "Circular Bold", sans-serif;
+	
+	
 	font-size: .9rem;
 	margin-top: .8rem;
 }
@@ -429,8 +430,17 @@ li.today .date {
 	z-index: -1;
 }
 
+.social {
+	position: fixed;
+	right: 2.5rem;
+	bottom: 1.75rem;
+}
 
-
+.social a {
+	width: 2.5rem;
+	display: inline-block;
+	padding: .3rem;
+}
 
 @media (max-width: 768px) {
 
@@ -531,18 +541,3 @@ li.today .date {
 		height: 180px;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
