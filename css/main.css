@@ -449,7 +449,17 @@ li.today .date {
 
 @media (max-width: 768px) {
 
-
+	nav a.logotype {
+		width: 100%;
+		text-align: left;
+	}
+	
+	nav a.logotype:after {
+		content: 'Menu';
+		float: right;
+		color: #fff;
+	}
+	
 	br {
 		display: none;
 	}
