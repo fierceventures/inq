@@ -173,6 +173,11 @@ section h4 {
 	display: inline-block;
 }
 
+.about .cta h3 {
+	margin-top: 1rem;
+	margin-bottom: .8rem;
+}
+
 .logotype {
 	float: left;
 	margin-left: 1.6rem;
