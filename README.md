@@ -17,3 +17,5 @@ $ bundle exec jekyll serve
 ```
 
 This will run a webserver on http://locahost:4000
+
+#Permanent Facebook access code
