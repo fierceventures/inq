@@ -6,7 +6,8 @@ function fetchEvents(response) {
       return {
         title: item.name,
         start: item.start_time,
-        end: item.end_time
+        end: item.end_time,
+        url: 'https://www.facebook.com/events/' + item.id
       }
     });
 
@@ -25,7 +26,7 @@ window.fbAsyncInit = function() {
   });
 
   FB.api("/InnovationNQ/events", fetchEvents, {
-    access_token: "EAAHt7u1OW10BAGSnI60Lckub2yDoBJgpNi97Eg6bySyDZCn56wuE98DZCpxJJA1JY9ARy5LKm7WOTbq6THFkZB7BgvwrVeb2lFfsMAIY06h6VrWqWYuhZAOKRi5S6lyaeBcKZAZB1GNcENLQa2kuuPOwLvtujELmMLc7JnqcVLWwbhdodxcXiZCc2C8P77r10EZD"
+    access_token: "EAAHt7u1OW10BAFPhZBCncKBsosxJ0ZAUiFMzJikEOGrw70ZAqqkJUqk4a43H2ZBcDRvUBmLM2hkKiTCfbZCsxt6KRTwmRTPeX62yOXnbY9B6fPxH0iiyi0U0D5Lw1vtJJ2CyGy4E36q5pEh0ZClHmdUmUsIZCy9tzmNvCR7fVGfoAZDZD"
   });
 };
 
