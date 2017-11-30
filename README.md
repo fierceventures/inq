@@ -18,13 +18,15 @@ $ bundle exec jekyll serve
 
 This will run a webserver on http://locahost:4000
 
+[Convert HTML to Jekyll](https://github.com/fierceventures/theartof/blob/master/README.md)
+
 # Permanent Facebook Access Token set up
 
 Prerequisite: must be the page admin; changing password or changing admin status will stop the permanent access token
 
-1. Set up a [website app](https://developers.facebook.com/apps/) here.
+Set up a [website app](https://developers.facebook.com/apps/) here.
 
-2. Create User-Short-lived Access Token at [Graph API Explorer](https://developers.facebook.com/tools/explorer).
+Create User-Short-lived Access Token at [Graph API Explorer](https://developers.facebook.com/tools/explorer).
 
       >Near top right "Application :Graph API Explorer", select your web application.
       
@@ -36,7 +38,7 @@ Prerequisite: must be the page admin; changing password or changing admin status
       
       >User-Short-lived Access Token is in the access token box.
 
-3. Stay on [Graph API Explorer](https://developers.facebook.com/tools/explorer) to create Page Short-lived Access Token.
+Stay on [Graph API Explorer](https://developers.facebook.com/tools/explorer) to create Page Short-lived Access Token.
 
       >Click "Get Token" > "Get Page Access Token" (This is not the one).
       
@@ -44,7 +46,7 @@ Prerequisite: must be the page admin; changing password or changing admin status
       
       >Page Short-lived Access Token is in the access token box.
       
- 4. Creating Page-Long-live Access Token at [Access Token Debugger](https://developers.facebook.com/tools/debug/accesstoken/).
+Creating Page-Long-live Access Token at [Access Token Debugger](https://developers.facebook.com/tools/debug/accesstoken/).
  
       >Paste the Page Short-lived Access Token in the debug and run it.
       
@@ -54,11 +56,12 @@ Prerequisite: must be the page admin; changing password or changing admin status
       
       >Click debug near botom right.
       
- 5. Make a GET request for Permanent Access Token using Long-lived Access Token
+Make a GET request for Permanent Access Token using Long-lived Access Token
+
       >Replace USER ID and PAGE-LONG-LIVED-ACCESS-TOKEN; both can be found on debug page.
-      ```
-      https://graph.facebook.com/v2.10/{USER ID}/accounts?access_token={PAGE-LONG-LIVED-ACCESS-TOKEN}
-      ```
+```
+https://graph.facebook.com/v2.10/{USER ID}/accounts?access_token={PAGE-LONG-LIVED-ACCESS-TOKEN}
+```
       >Access token in the result is the Permanent Access Token.
       
       >Check at [Access Token Debugger](https://developers.facebook.com/tools/debug/accesstoken/), Expires show display "Never".
