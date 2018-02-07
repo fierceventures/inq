@@ -1,1 +1,11 @@
 
+version: 2
+jobs:
+
+  build:  
+    docker:
+      - image: fierceventures/mcfly
+    
+    steps:
+      - checkout
+      - run: ./inq.sh deploy
