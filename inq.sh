@@ -56,7 +56,7 @@ if [[ $# -eq 0 ]]; then
     usage
 
 elif [ $1 = "deploy" ]; then
-    deploy
+    deploy $2
 
 else
   usage
