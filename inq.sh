@@ -49,6 +49,7 @@ deploy() {
     bundle install
     bundle exec jekyll build
     aws s3 sync _site s3://i-nq.com.au/ --delete
+    aws cloudfront create-invalidation --distribution-id $1 --paths '/*'
 }
 
 if [[ $# -eq 0 ]]; then
