@@ -3,7 +3,7 @@ jobs:
 
   build:  
     docker:
-      - image: fierceventures/mcfly
+      - image: fierceventures/mcclane:mcclane-v2
     
     steps:
       - checkout
