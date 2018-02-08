@@ -47,9 +47,13 @@ abort_on_error() {
 
 deploy() {
     bundle install
+    abort_on_error()
     bundle exec jekyll build
+    abort_on_error()
     aws s3 sync _site s3://i-nq.com.au/ --delete
+    abort_on_error()
     aws cloudfront create-invalidation --distribution-id $1 --paths '/*'
+    abort_on_error()
 }
 
 if [[ $# -eq 0 ]]; then
