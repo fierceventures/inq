@@ -385,6 +385,11 @@ section h4 {
 	margin-top: 3rem;
 }
 
+.about .button {
+	margin-top: 0;
+	margin-bottom: 2rem;
+}
+
 .event .button {
 	border-radius: 0;
 	font-size: .8rem;
